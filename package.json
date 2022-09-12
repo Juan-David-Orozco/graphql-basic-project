@@ -1,0 +1,30 @@
+{
+  "name": "graphql-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist --source-maps",
+    "start": "babel-node src/index.js",
+    "serve": "node dist/index.js",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.2.1",
+    "graphql-tools": "^4.0.4",
+    "nodemon": "^2.0.19",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.19.0"
+  }
+}
