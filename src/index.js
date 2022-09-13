@@ -1,8 +1,10 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql'
 import schema from './schema'
+import { connection } from './database'
 
 const app = express(); // Se inicializa el servidor
+connection() // Ejecucion conexion DB
 
 app.get('/', (req, res) => { res.send("Welcome") })
 
