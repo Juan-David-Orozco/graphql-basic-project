@@ -12,7 +12,10 @@ app.get('/', (req, res) => { res.send("Welcome") })
 export const schema = {}; */
 app.use('/graphql', graphqlHTTP({
   graphiql: true,
-  schema: schema
+  schema: schema,
+  context: { // objeto comun para todos los resolvers
+    messageId: "test"
+  }
 }))
 
 app.listen(3000, () => console.log('Server on port 3000'))
